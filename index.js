@@ -78,6 +78,7 @@ module.exports = function(content, file, conf) {
       isHtmlLike: true
     });
     // runtimeOnly
+    configs.runtimeOnly = true;
     if(configs.runtimeOnly){
       var result = compileTemplate(templateContent);
       if(result){
