@@ -1,10 +1,10 @@
 {
-  "name": "fis3-parser-vue-component",
+  "name": "fis3-parser-vue-component42.2.6",
   "version": "5.5.1",
   "description": "A parser plugin for fis3 to parser vue component.",
   "keywords": [
     "fis3",
-    "fis3-parser-vue-component",
+    "fis3-parser-vue-component42.2.6",
     "fis3-parser",
     "vue",
     "component"
@@ -19,7 +19,7 @@
     "postcss": "^5.2.16",
     "postcss-selector-parser": "^2.2.3",
     "uglify-js": "^2.8.14",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "2.2.6",
     "vue-template-es2015-compiler": "^1.6.0"
   },
   "devDependencies": {},
@@ -28,12 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ccqgithub/fis3-parser-vue-component.git"
+    "url": "git+https://github.com/LiuYueKai/fis3-parser-vue-component42.2.6.git"
   },
   "author": "Season Chen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ccqgithub/fis3-parser-vue-component/issues"
+    "url": "https://github.com/LiuYueKai/fis3-parser-vue-component42.2.6/issues"
   },
-  "homepage": "https://github.com/ccqgithub/fis3-parser-vue-component#readme"
+  "homepage": "https://github.com/LiuYueKai/fis3-parser-vue-component42.2.6#readme"
 }
