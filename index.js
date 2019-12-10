@@ -97,7 +97,7 @@ module.exports = function(content, file, conf) {
   }
 
   // style
-  output.styles.forEach(function(item, index) {
+  output.styles.forEach( async function(item, index) {
     if(!item.content){
       return;
     }
@@ -113,7 +113,10 @@ module.exports = function(content, file, conf) {
       isCssLike: true
     });
 
-    styleContent = rewriteStyle(id, styleContent, item.scoped, {})
+    styleContent = await rewriteStyle(id, styleContent, item.scoped, {})
+    // rewriteStyle(id, styleContent, item.scoped, {}).then((styleContent) => {
+
+    // })
 
     if(!configs.extractCSS){
       scriptStr += '\n;(' + insertCSS + ')(' + JSON.stringify(styleContent) + ');\n';
