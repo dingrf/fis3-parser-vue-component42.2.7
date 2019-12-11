@@ -97,11 +97,10 @@ module.exports = function(content, file, conf) {
   }
 
   // style
-  output.styles.forEach( async function(item, index) {
+  output.styles.forEach(function(item, index) {
     if(!item.content){
       return;
     }
-
     // empty string, or all space line
     if(/^\s*$/.test(item.content)){
       return;
@@ -113,10 +112,7 @@ module.exports = function(content, file, conf) {
       isCssLike: true
     });
 
-    styleContent = await rewriteStyle(id, styleContent, item.scoped, {})
-    // rewriteStyle(id, styleContent, item.scoped, {}).then((styleContent) => {
-
-    // })
+    styleContent = rewriteStyle(id, styleContent, item.scoped, {})
 
     if(!configs.extractCSS){
       scriptStr += '\n;(' + insertCSS + ')(' + JSON.stringify(styleContent) + ');\n';
@@ -143,6 +139,5 @@ module.exports = function(content, file, conf) {
     file.derived.push(styleFile);
     file.addRequire(styleFile.getId());
   });
-
   return scriptStr;
 };
